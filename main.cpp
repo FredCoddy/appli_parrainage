@@ -1,16 +1,10 @@
-#include <iostream>
-#include "Etudiant.h"
+#include <QApplication>
+#include "fencodegenerecpp.h"
+#include "fenprincipale.h"
 
-using namespace std;
-
-
-
-int main()
-{
-    Etudiant Marssouss;
-    Marssouss.afficherPoints();
-
-    // int nbr = Marssouss.return_points();
-    // cout << "mon chiffre : " << nbr << endl;
-    return 0;
+int main(int argc, char *argv[]){
+    QApplication app(argc, argv);
+    FenPrincipale fenprinci;
+    fenprinci.show();
+    return app.exec();
 }
