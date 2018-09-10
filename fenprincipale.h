@@ -31,7 +31,7 @@ class FenPrincipale : public QWidget
 public:
     FenPrincipale();
     QLineEdit *m_nom, *m_prenom;
-    static QString nom;
+    QString nom;
 
 
 public slots:

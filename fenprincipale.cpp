@@ -1,8 +1,9 @@
 #include "fenprincipale.h"
 #include "fencodegenerecpp.h"
 #include "dialog.h"
+#include <iostream>
 
-QString FenPrincipale::nom;
+//QString FenPrincipale::nom= "khcdbhdcs";
 
 
 FenPrincipale::FenPrincipale() : QWidget()
@@ -11,8 +12,8 @@ FenPrincipale::FenPrincipale() : QWidget()
     QVBoxLayout *layoutPrincipale = new QVBoxLayout;
 
     //Formulaire de base
-    QLineEdit *m_nom = new QLineEdit;
-    QLineEdit *m_prenom = new QLineEdit;
+    m_nom = new QLineEdit;
+    m_prenom = new QLineEdit;
     QFormLayout *info_etudiant = new QFormLayout;
     info_etudiant->addRow("Nom : ",m_nom);
     info_etudiant->addRow("Prenom : ",m_prenom);
@@ -34,11 +35,13 @@ FenPrincipale::FenPrincipale() : QWidget()
     this->setWindowTitle("AMBB Application Parrainage");
     this->setWindowIcon(QIcon("biologo.svg"));
 
-    connect(m_nom, SIGNAL(textChanged(const QString &)), this, SLOT(nom(const QString &)));
+    //connect(m_nom, SIGNAL(textChanged(const QString &)), this, SLOT(nom(const QString &)));
     connect(demarrer,SIGNAL(clicked()),this, SLOT(Debut_QCM()));
 }
 
 void FenPrincipale::Debut_QCM()
 {
-    QMessageBox::critical(this,"erreur", nom);
+    nom = m_nom->text();
+//    std::cout << m_nom.text().toStdString();
+    QMessageBox::critical(this,"erreur",nom );
 }
