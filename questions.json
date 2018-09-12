@@ -1,0 +1,71 @@
+{
+  "1": {
+    "question": "Tu preferes ?",
+    "1": {
+      "text": "Pain au chocolat",
+      "category": "connard",
+      "value": "1"
+    },
+    "2": {
+      "text": "Chocolatine",
+      "category": "goodguy",
+      "value": "1"
+    },
+    "3": {
+      "text": "Je m'en fou ça n'a aucun interêt",
+      "category": "seriousguy",
+      "value": "1"
+    },
+    "4": {
+      "text": "Petit pain",
+      "category": "fun",
+      "value": "1"
+    }
+  },
+  "2": {
+    "question": "Ton niveau global en informatique est plutôt:",
+    "1": {
+      "text": "Je decouvre ce monde merveilleux mais je connais pas encore",
+      "category": "informatique",
+      "value": "0"
+    },
+    "2": {
+      "text": "Je connais mes bases (bureautique), mais je connais pas trop tout ce qui est techniques",
+      "category": "informatique",
+      "value": "1"
+    },
+    "3": {
+      "text": "Je me suis dejà un peu interesse à la programmation ou bidouille des trucs sur mon ordi",
+      "category": "informatique",
+      "value": "2"
+    },
+    "4": {
+      "text": "Je connais au moins un langage de programmation et j'ai deja creer un programme (meme s'il est petit)",
+      "category": "informatique",
+      "value": "3"
+    }
+  },
+  "3": {
+    "question": "Ton niveau global en informatique est plutôt:",
+    "1": {
+      "text": "Je decouvre ce monde merveilleux mais je connais pas encore",
+      "category": "informatique",
+      "value": "0"
+    },
+    "2": {
+      "text": "Je connais mes bases (bureautique), mais je connais pas trop tout ce qui est techniques",
+      "category": "informatique",
+      "value": "1"
+    },
+    "3": {
+      "text": "Je me suis dejà un peu interesse à la programmation ou bidouille des trucs sur mon ordi",
+      "category": "informatique",
+      "value": "2"
+    },
+    "4": {
+      "text": "Je connais au moins un langage de programmation et j'ai deja creer un programme (meme s'il est petit)",
+      "category": "informatique",
+      "value": "3"
+    }
+  }
+}

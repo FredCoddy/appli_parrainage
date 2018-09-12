@@ -1,7 +1,7 @@
 #include "fenprincipale.h"
-#include "fencodegenerecpp.h"
 #include "dialog.h"
 #include <iostream>
+#include "fenqcm.h"
 
 //QString FenPrincipale::nom= "khcdbhdcs";
 
@@ -30,18 +30,21 @@ FenPrincipale::FenPrincipale() : QWidget()
     layoutPrincipale -> addWidget(type_etudiant);
     layoutPrincipale -> addWidget(demarrer);
 
-
+    // Paramètres de la page
     this->setLayout(layoutPrincipale);
     this->setWindowTitle("AMBB Application Parrainage");
     this->setWindowIcon(QIcon("biologo.svg"));
 
-    //connect(m_nom, SIGNAL(textChanged(const QString &)), this, SLOT(nom(const QString &)));
-    connect(demarrer,SIGNAL(clicked()),this, SLOT(Debut_QCM()));
+//    connect(demarrer,SIGNAL(clicked()),this, SLOT(Debut_QCM()));
+    connect(demarrer,SIGNAL(clicked(bool)),this, SLOT(Debut_QCM()));
+
 }
 
 void FenPrincipale::Debut_QCM()
 {
-    nom = m_nom->text();
-//    std::cout << m_nom.text().toStdString();
-    QMessageBox::critical(this,"erreur",nom );
+//    nom = m_nom->text();
+//    QMessageBox::critical(this,"erreur",nom );
+    FenQCM *fen_qcm = new FenQCM;
+    fen_qcm->exec();
 }
+

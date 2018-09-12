@@ -26,11 +26,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         fenprincipale.cpp \
-        fencodegenerecpp.cpp
+    fenqcm.cpp
 
 HEADERS += \
         fenprincipale.h \
-        fencodegenerecpp.h
+    fenqcm.h
 
 FORMS += \
     dialog.ui
