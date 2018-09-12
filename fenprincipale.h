@@ -21,7 +21,8 @@
 #include <QObject>
 #include <QComboBox>
 #include <QString>
-
+#include <string>
+using namespace std;
 
 class FenPrincipale : public QWidget
 {
@@ -31,7 +32,8 @@ class FenPrincipale : public QWidget
 public:
     FenPrincipale();
     QLineEdit *m_nom, *m_prenom;
-    QString nom;
+    string nom;
+    string prenom;
 
 
 public slots:

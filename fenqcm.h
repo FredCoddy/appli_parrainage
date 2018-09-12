@@ -17,6 +17,8 @@ class FenQCM : public QDialog{
   public :
     FenQCM();
     void questionSuivante();
+    void calculScore();
+    void categoryCreator();
 
   public slots:
     void actionReponse1();
@@ -25,11 +27,10 @@ class FenQCM : public QDialog{
     void actionReponse4();
 
   private:
-    QLabel *la_question;
-    QPushButton *rep1, rep2, rep3, rep4;
+    QLabel *la_question, *rep1lbl, *rep2lbl, *rep3lbl, *rep4lbl;
     QGridLayout * layout_bouton;
     QVBoxLayout * layout_principal ;
-
+    QPushButton *rep1, *rep2, *rep3, *rep4;
     int *value,answer, numero_question=1;
 };
 

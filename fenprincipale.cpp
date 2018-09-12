@@ -42,7 +42,9 @@ FenPrincipale::FenPrincipale() : QWidget()
 
 void FenPrincipale::Debut_QCM()
 {
-//    nom = m_nom->text();
+    nom = m_nom->text().toStdString();
+    prenom = m_prenom->text().toStdString();
+    cout<<nom<<endl;
 //    QMessageBox::critical(this,"erreur",nom );
     FenQCM *fen_qcm = new FenQCM;
     fen_qcm->exec();

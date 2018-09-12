@@ -26,11 +26,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         fenprincipale.cpp \
-    fenqcm.cpp
+    fenqcm.cpp \
+    dialog.cpp
 
 HEADERS += \
         fenprincipale.h \
-    fenqcm.h
+    fenqcm.h \
+    json.hpp \
+    dialog.h
 
 FORMS += \
     dialog.ui
+
+DISTFILES += \
+    questions.json
