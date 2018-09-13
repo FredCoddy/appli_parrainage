@@ -64,7 +64,7 @@
     },
     "4": {
       "text": "... quand tu bois 6 binouses",
-      "category": "Fêtard",
+      "category": "Fétard",
       "value": "1"
     }
   },
@@ -146,7 +146,7 @@
     },
     "2": {
       "text": "BOITE-MAN",
-      "category": "Fêtard",
+      "category": "Fétard",
       "value": "1"
     },
     "3": {
@@ -155,215 +155,124 @@
       "value": "1"
     },
     "4": {
-      "text": "a barbie girl in a barbie world",
+      "text": "a barby girl in a barby world",
       "category": "Sympa",
       "value": "1"
     }
   },
   "8": {
-    "question": "Les réptiliens dominent le monde",
+    "question": "Tes potes te jalousent...",
     "1": {
-      "text": "Tu le savais... tounéketrompri",
-      "category": "Sympa",
-      "value": "1"
-    },
-    "2": {
-      "text": "Les reptiliens n'existe pas",
-      "category": "Sérieux",
-      "value": "1"
-    },
-    "3": {
-      "text": "Pas du tout c'est les machines. Y a déjà eu des études qui émettent l'hypothèse qu'on est dans la matrice...",
+      "text": "...quand tu geek pépouze",
       "category": "Informatique",
       "value": "1"
     },
+    "2": {
+      "text": "...quand tu es dans ta maison andalouse",
+      "category": "Aventurier",
+      "value": "1"
+    },
+    "3": {
+      "text": "...quand tu les trace sur la pelouse",
+      "category": "Sportif",
+      "value": "1"
+    },
     "4": {
-      "text": "Mouai... ça me parait un peu chelou cette histoire",
-      "category": "Blasé",
+      "text": "... quand tu bois 6 binouses",
+      "category": "Fétard",
       "value": "1"
     }
   },
   "9": {
-    "question": "Tu dois monter un meuble IKEA",
+    "question": "Tes potes te jalousent...",
     "1": {
-      "text": "Tu fonces têtes baissée, le manuel c'est pour les faibles",
-      "category": "Aventurier",
+      "text": "...quand tu geek pépouze",
+      "category": "Informatique",
       "value": "1"
     },
     "2": {
-      "text": "T'as un peu la flemme",
-      "category": "Blasé",
+      "text": "...quand tu es dans ta maison andalouse",
+      "category": "Aventurier",
       "value": "1"
     },
     "3": {
-      "text": "Tu alignes toutes les vis dans une petite boite, tu potasses le manuel et tu respectes bien tout étape par étape",
-      "category": "Sérieux",
+      "text": "...quand tu les trace sur la pelouse",
+      "category": "Sportif",
       "value": "1"
     },
     "4": {
-      "text": "IK-EAAAAAAAA",
-      "category": "Sympa",
+      "text": "... quand tu bois 6 binouses",
+      "category": "Fétard",
       "value": "1"
     }
   },
   "10": {
-    "question": "Tu es plutôt du genre : ",
+    "question": "Tes potes te jalousent...",
     "1": {
-      "text": "Sensible au mot magique 'Apéro'.",
-      "category": "Fêtard",
+      "text": "...quand tu geek pépouze",
+      "category": "Informatique",
       "value": "1"
     },
     "2": {
-      "text": "'Hardworker', le top 1 en vue.",
-      "category": "Sérieux",
+      "text": "...quand tu es dans ta maison andalouse",
+      "category": "Aventurier",
       "value": "1"
     },
     "3": {
-      "text": "Toujours là pour donner un coup de pouce.",
-      "category": "Sympa",
+      "text": "...quand tu les trace sur la pelouse",
+      "category": "Sportif",
       "value": "1"
     },
     "4": {
-      "text": "L'effort, c'est pas ton fort !",
-      "category": "Flemmard",
+      "text": "... quand tu bois 6 binouses",
+      "category": "Fétard",
       "value": "1"
     }
   },
   "11": {
-    "question": "PC ou MAC",
+    "question": "Tes potes te jalousent...",
     "1": {
-      "text": "PC",
+      "text": "...quand tu geek pépouze",
       "category": "Informatique",
-      "value": "2"
+      "value": "1"
     },
     "2": {
-      "text": "MAC",
-      "category": "Informatique",
-      "value": "0"
-    },
-    "3": {
-      "text": "MAC",
-      "category": "Informatique",
-      "value": "0"
-    },
-    "4": {
-      "text": "PC",
-      "category": "Informatique",
-      "value": "2"
-    }
-  },
-  "12": {
-    "question": "Les sorties, les voyages pour toi c'est :",
-    "1": {
-      "text": "Un calvaire, tu es casanier et fier de l'être !",
-      "category": "Aventurier",
-      "value": "0"
-    },
-    "2": {
-      "text": "En fonction de ton niveau de flemme.",
+      "text": "...quand tu es dans ta maison andalouse",
       "category": "Aventurier",
       "value": "1"
     },
     "3": {
-      "text": "Cool une fois de temps en temps.",
-      "category": "Aventurier",
-      "value": "2"
-    },
-    "4": {
-      "text": "Ta raison de vivre. Vive l'aventure !",
-      "category": "Aventurier",
-      "value": "3"
-    }
-  },
-  "13": {
-    "question": "La réponse est vraiment grosse :",
-    "1": {
-      "text": "LA REPONSE",
-      "category": "Sympa",
-      "value": "1"
-    },
-    "2": {
-      "text": "Vraiment grosse",
-      "category": "Blasé",
-      "value": "1"
-    },
-    "3": {
-      "text": "Un éléphant",
-      "category": "Sérieux",
-      "value": "1"
-    },
-    "4": {
-      "text": "Error : données insufisantes",
-      "category": "Informatique",
-      "value": "1"
-    }
-  },
-  "14": {
-    "question": "Une personne se précipite et se prend une porte vitrée. Toi ...",
-    "1": {
-      "text": "Tu te demandes s'il va bien. Il peut être blessé.",
-      "category": "Sympa",
-      "value": "3"
-    },
-    "2": {
-      "text": "Tu essaies de rester cool et de contenir ton fou rire.",
-      "category": "Sympa",
-      "value": "2"
-    },
-    "3": {
-      "text": "Tu pars dans un fou rire incontrôlable.",
-      "category": "Sympa",
-      "value": "1"
-    },
-    "4": {
-      "text": "Tu en arrives à la conclusion que les idiots et les oiseaux ont deux choses en commun : la taille de leur cerveau et leur incapicité à voir les portes vitrées.",
-      "category": "Sympa",
-      "value": "0"
-    }
-  },
-  "15": {
-    "question": "Tu as du temps libre...",
-    "1": {
-      "text": "Tu te fais un petit footing au calme !",
+      "text": "...quand tu les trace sur la pelouse",
       "category": "Sportif",
       "value": "1"
     },
-    "2": {
-      "text": "Tu lances un appel à la bière !",
-      "category": "Fêtard",
-      "value": "1"
-    },
-    "3": {
-      "text": "Tu décides de t'avancer dans les cours.",
-      "category": "Sérieux",
-      "value": "1"
-    },
     "4": {
-      "text": "Tu geek... bah oui",
-      "category": "Informatique",
+      "text": "... quand tu bois 6 binouses",
+      "category": "Fétard",
       "value": "1"
     }
-  },
-  "16": {
-    "question": "L'ananas sur la pizza, pour toi c'est...",
+  }
+  ,
+  "12": {
+    "question": "Tes potes te jalousent...",
     "1": {
-      "text": "Délicieux ! Le sucré-salé c'est la vie.",
-      "category": "Sympa",
+      "text": "...quand tu geek pépouze",
+      "category": "Informatique",
       "value": "1"
     },
     "2": {
-      "text": "Une hérésie !",
-      "category": "Sérieux",
-      "value": "1"
-    },
-    "3": {
-      "text": "Pas encore essayé, mais je suis ouvert pour les expérimentations...",
+      "text": "...quand tu es dans ta maison andalouse",
       "category": "Aventurier",
       "value": "1"
     },
+    "3": {
+      "text": "...quand tu les trace sur la pelouse",
+      "category": "Sportif",
+      "value": "1"
+    },
     "4": {
-      "text": "Balek.",
-      "category": "Blasé",
+      "text": "... quand tu bois 6 binouses",
+      "category": "Fétard",
       "value": "1"
     }
   }

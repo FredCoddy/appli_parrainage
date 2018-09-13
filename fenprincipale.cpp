@@ -67,13 +67,19 @@ int FenPrincipale::writeCSV(FenQCM *fen_qcm, json json_object){
     file.open (niveau_fichier, std::ofstream::out | std::ofstream::app);
     file << json_object["prenom"] << ";";
     file << json_object["nom"] << ";";
-    for (json::iterator it = fen_qcm->score["note"].begin(); it != fen_qcm->score["note"].end(); it++) {
+    /*for (json::iterator it = fen_qcm->score["note"].begin(); it != fen_qcm->score["note"].end(); it++) {
       //std::cout << it.key() << " : " << it.value() << "\n";
         if(it != fen_qcm->score["note"].end()){
             file << it.value() << ";";
         }
 
+    }*/
+    vector<int> sequence = fen_qcm->score["sequence"];
+
+    for(std::size_t i=0; i<sequence.size(); ++i){
+        file<< sequence[i] <<";";
     }
+
     file << "\n";
     file.close();
 

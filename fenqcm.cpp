@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include <QDir>
+#include <vector>
 
 using json = nlohmann::json;
 using namespace std;
@@ -115,6 +116,7 @@ void FenQCM::categoryCreator(){
         }
       }
    }
+    score["sequence"]={0};
 }
 
 void FenQCM::actionReponse1(){
@@ -147,6 +149,9 @@ void FenQCM::calculScore(){
     cout<< category << "  " << valuetext << endl;
     int currentscore = score["note"][category];
     score["note"][category]= currentscore + stoi(valuetext);
+    vector<int> tempvector = score["sequence"].get<std::vector<int>>();
+    tempvector.push_back(answer);
+    score["sequence"]=tempvector;
 }
 
 
