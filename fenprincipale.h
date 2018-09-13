@@ -22,7 +22,13 @@
 #include <QComboBox>
 #include <QString>
 #include <string>
+#include <iostream>
+#include <fstream>
+#include "json.hpp"
+#include "fenqcm.h"
 using namespace std;
+using json = nlohmann::json;
+
 
 class FenPrincipale : public QWidget
 {
@@ -32,8 +38,11 @@ class FenPrincipale : public QWidget
 public:
     FenPrincipale();
     QLineEdit *m_nom, *m_prenom;
+    QComboBox *type_etudiant;
     string nom;
     string prenom;
+    string niveau;
+    int writeCSV(FenQCM*, json);
 
 public slots:
     void Debut_QCM();
@@ -44,7 +53,6 @@ private :
 //    QMessageBox *alerte;
     QPushButton *demarrer;
     QFormLayout *info_etudiant;
-    QComboBox *type_etudiant;
     QVBoxLayout *layoutPrincipale;
 
 

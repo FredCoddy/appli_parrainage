@@ -1,6 +1,7 @@
 #include "fenprincipale.h"
 #include "dialog.h"
 #include <iostream>
+#include <fstream>
 #include "fenqcm.h"
 
 
@@ -17,9 +18,9 @@ FenPrincipale::FenPrincipale() : QWidget()
     info_etudiant->addRow("Prenom : ",m_prenom);
 
     //Combobox
-    QComboBox *type_etudiant = new QComboBox;
-    type_etudiant->addItem("Parrain / Maraine");
-    type_etudiant->addItem("Fillot / Fillotte");
+    type_etudiant = new QComboBox;
+    type_etudiant->addItem("M1");
+    type_etudiant->addItem("M2");
 
     QPushButton *demarrer = new QPushButton("Démarrer", this);
 
@@ -44,10 +45,37 @@ void FenPrincipale::Debut_QCM()
     FenQCM *fen_qcm = new FenQCM;
     nom = m_nom->text().toStdString();
     prenom = m_prenom->text().toStdString();
-    cout<<"Fenprinci cout: "<<nom<<endl;
+    niveau = type_etudiant->currentText().toStdString();
     fen_qcm->exec();
     fen_qcm->score["prenom"]=prenom;
     fen_qcm->score["nom"]=nom;
+    fen_qcm->score["niveau"]=niveau;
     cout<<"Fenprinci cout score: "<<fen_qcm->score<<endl;
+    writeCSV(fen_qcm,fen_qcm->score);
 }
 
+int FenPrincipale::writeCSV(FenQCM *fen_qcm, json json_object){
+    string niveau_fichier;
+    if(json_object["niveau"]=="M1"){
+        niveau_fichier="M1.csv";
+    }
+    else{
+        niveau_fichier="M2.csv";
+    }
+
+    ofstream file;
+    file.open (niveau_fichier, std::ofstream::out | std::ofstream::app);
+    file << json_object["prenom"] << ";";
+    file << json_object["nom"] << ";";
+    for (json::iterator it = fen_qcm->score["note"].begin(); it != fen_qcm->score["note"].end(); it++) {
+      //std::cout << it.key() << " : " << it.value() << "\n";
+        if(it != fen_qcm->score["note"].end()){
+            file << it.value() << ";";
+        }
+
+    }
+    file << "\n";
+    file.close();
+
+    return 0;
+}

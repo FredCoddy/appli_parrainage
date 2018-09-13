@@ -39,4 +39,6 @@ FORMS += \
     dialog.ui
 
 DISTFILES += \
-    questions.json
+    questions.json \
+    M1.csv \
+    M2.csv

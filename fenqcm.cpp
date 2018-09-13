@@ -121,28 +121,32 @@ void FenQCM::actionReponse1(){
     answer =1 ;
     calculScore();
     questionSuivante();
-
 }
 
 void FenQCM::actionReponse2(){
     answer =2 ;
     calculScore();
+    questionSuivante();
 }
 
 void FenQCM::actionReponse3(){
     answer =3 ;
     calculScore();
+    questionSuivante();
 }
 
 void FenQCM::actionReponse4(){
     answer =4 ;
     calculScore();
+    questionSuivante();
 }
 
 void FenQCM::calculScore(){
     std::string category = j[std::to_string(numero_question)][std::to_string(answer)]["category"];
     std::string valuetext = j[std::to_string(numero_question)][std::to_string(answer)]["value"];
     cout<< category << "  " << valuetext << endl;
+    int currentscore = score["note"][category];
+    score["note"][category]= currentscore + stoi(valuetext);
 }
 
 
