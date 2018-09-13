@@ -3,8 +3,6 @@
 #include <iostream>
 #include "fenqcm.h"
 
-//QString FenPrincipale::nom= "khcdbhdcs";
-
 
 FenPrincipale::FenPrincipale() : QWidget()
 {
@@ -42,11 +40,14 @@ FenPrincipale::FenPrincipale() : QWidget()
 
 void FenPrincipale::Debut_QCM()
 {
-    nom = m_nom->text().toStdString();
-    prenom = m_prenom->text().toStdString();
-    cout<<nom<<endl;
 //    QMessageBox::critical(this,"erreur",nom );
     FenQCM *fen_qcm = new FenQCM;
+    nom = m_nom->text().toStdString();
+    prenom = m_prenom->text().toStdString();
+    cout<<"Fenprinci cout: "<<nom<<endl;
     fen_qcm->exec();
+    fen_qcm->score["prenom"]=prenom;
+    fen_qcm->score["nom"]=nom;
+    cout<<"Fenprinci cout score: "<<fen_qcm->score<<endl;
 }
 

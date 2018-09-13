@@ -35,7 +35,6 @@ public:
     string nom;
     string prenom;
 
-
 public slots:
     void Debut_QCM();
 

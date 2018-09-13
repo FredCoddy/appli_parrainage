@@ -1,7 +1,7 @@
 #ifndef FENQCM_H
 #define FENQCM_H
 
-#include <QtGui>
+//#include <QtGui>
 #include <QBoxLayout>
 #include <QDialog>
 #include <QPushButton>
@@ -9,7 +9,11 @@
 #include <QGridLayout>
 #include <QMessageBox>
 #include <QLabel>
-
+#include <string>
+#include "json.hpp"
+using namespace std;
+using json = nlohmann::json;
+using namespace std;
 
 class FenQCM : public QDialog{
     Q_OBJECT
@@ -19,6 +23,7 @@ class FenQCM : public QDialog{
     void questionSuivante();
     void calculScore();
     void categoryCreator();
+    json score;
 
   public slots:
     void actionReponse1();

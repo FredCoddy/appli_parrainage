@@ -4,11 +4,14 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <QDir>
 
 using json = nlohmann::json;
 using namespace std;
 
-static std::ifstream ifs("/net/cremi/piejacquet/Bureau/espaces/travail/parrain/appli_parrainage/questions.json");
+static string path_questions_json = QDir::currentPath().toStdString()+"/questions.json";
+
+static std::ifstream ifs(path_questions_json);
 static json j = json::parse(ifs);
 static json score;
 
@@ -96,13 +99,9 @@ FenQCM::FenQCM() : QDialog()
     connect(rep3, SIGNAL(clicked()),this,SLOT(actionReponse3()));
     connect(rep4, SIGNAL(clicked()),this,SLOT(actionReponse4()));
 
-
 }
 
-void FenQCM::categoryCreator(){
-    //string strprenom = FenPrincipale::nom;
-    //score["prenom"] = strprenom;
-    //score["nom"] = FenPrincipale::nom;
+void FenQCM::categoryCreator(){    
     for (int index= 1; index < j.size(); index++)
     {
         cout<<"index: "<<index<<endl;
@@ -116,7 +115,6 @@ void FenQCM::categoryCreator(){
         }
       }
    }
-    cout<<score["prenom"]<<"  "<<score["nom"]<<endl;
 }
 
 void FenQCM::actionReponse1(){
