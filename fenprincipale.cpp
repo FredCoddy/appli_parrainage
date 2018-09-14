@@ -22,7 +22,8 @@ FenPrincipale::FenPrincipale() : QWidget()
     type_etudiant->addItem("M2");
 
     QPushButton *demarrer = new QPushButton("Démarrer", this);
-
+    demarrer->setStyleSheet("padding-left: 5px; padding-right: 5px;"
+                            "padding-top: 100px; padding-bottom: 100px;");
     //Remplissage du layout principale
     layoutPrincipale->setSpacing(20);
     layoutPrincipale->setContentsMargins(50, 50, 50, 50);

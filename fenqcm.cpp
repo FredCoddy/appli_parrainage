@@ -6,9 +6,14 @@
 #include <string>
 #include <QDir>
 #include <vector>
+#include <chrono>
+#include <thread>
+
 
 using json = nlohmann::json;
 using namespace std;
+using namespace std::this_thread; // sleep_for, sleep_until
+using namespace std::chrono;
 
 static string path_questions_json = QDir::currentPath().toStdString()+"/questions.json";
 
@@ -47,7 +52,9 @@ FenQCM::FenQCM() : QDialog()
     // Customisation des boutons :
 
     la_question->setFixedHeight(400);
-    la_question->setAlignment(Qt::AlignCenter);
+    la_question->setAlignment(Qt::AlignVCenter);
+    la_question->setStyleSheet("padding-left: 5px; padding-right: 5px;"
+                               "padding-top: 100px; padding-bottom: 100px;");
 
     rep1->setFixedSize(400,200);
     rep2->setFixedSize(400,200);
@@ -66,7 +73,7 @@ FenQCM::FenQCM() : QDialog()
 
     //Font-size
     QFont font = la_question->font();
-    font.setPointSize(50);
+    font.setPointSize(40);
     font.setBold(true);
     la_question->setFont(font);
 
@@ -162,8 +169,15 @@ void FenQCM::calculScore(){
 
 void FenQCM::questionSuivante(){
     numero_question++;
+
     if(numero_question > j.size()){
-        cout << "Fin" << endl;
+        la_question->setText("Fin des questions !");
+        rep1lbl->setText("");
+        rep2lbl->setText("");
+        rep3lbl->setText("");
+        rep4lbl->setText("");
+        sleep_for(seconds(3));
+       close();
     }
     else{
         label_num_question->setText(QString::number(numero_question)+ "/" + QString::number(j.size()));
