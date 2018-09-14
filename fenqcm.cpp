@@ -32,6 +32,7 @@ FenQCM::FenQCM() : QDialog()
     QString q_rep3 = QString::fromStdString(j[numero_question_str]["3"]["text"]);
     QString q_rep4 = QString::fromStdString(j[numero_question_str]["4"]["text"]);
 
+    label_num_question = new QLabel("1/"+QString::number(j.size()));
     la_question = new QLabel(q_question);
     rep1 = new QPushButton();
     rep2 = new QPushButton();
@@ -79,6 +80,9 @@ FenQCM::FenQCM() : QDialog()
     layoutbtn4->addWidget(rep4lbl,0,Qt::AlignCenter);
 
     // Remplissage du Layout principale
+
+
+
     layout_bouton->addWidget(rep1,0,0);
     layout_bouton->addWidget(rep2,0,1);
     layout_bouton->addWidget(rep3,1,0);
@@ -86,6 +90,7 @@ FenQCM::FenQCM() : QDialog()
 
 
     // Dernières étape : ajout du Layout dans la fenêtre
+    layout_principal->addWidget(label_num_question, 0, Qt::AlignRight);
     layout_principal->addWidget(la_question);
     layout_principal->addLayout(layout_bouton);
     this->setLayout(layout_principal);
@@ -161,6 +166,7 @@ void FenQCM::questionSuivante(){
         cout << "Fin" << endl;
     }
     else{
+        label_num_question->setText(QString::number(numero_question)+ "/" + QString::number(j.size()));
         la_question->setText(QString::fromStdString(j[std::to_string(numero_question)]["question"]));
         rep1lbl->setText(QString::fromStdString(j[std::to_string(numero_question)]["1"]["text"]));
         rep2lbl->setText(QString::fromStdString(j[std::to_string(numero_question)]["2"]["text"]));

@@ -32,7 +32,7 @@ class FenQCM : public QDialog{
     void actionReponse4();
 
   private:
-    QLabel *la_question, *rep1lbl, *rep2lbl, *rep3lbl, *rep4lbl;
+    QLabel *la_question, *rep1lbl, *rep2lbl, *rep3lbl, *rep4lbl, *label_num_question;
     QGridLayout * layout_bouton;
     QVBoxLayout * layout_principal ;
     QPushButton *rep1, *rep2, *rep3, *rep4;
