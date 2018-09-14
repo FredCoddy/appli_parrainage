@@ -10,7 +10,7 @@ library(forcats)
 #result <- read.csv(file.choose(), header = FALSE, sep= ";", encoding="UTF-8")
 result <- read.csv("./../result.csv", header = FALSE, sep= ";", encoding="UTF-8")
 result <- result[,-4]
-result<-result[order(result$V3),]
+result<-result[order(-result$V3),]
 #matrix<-as.matrix(cast(result, V1 ~ V2))
 #heatmap(matrix)
 
@@ -33,7 +33,7 @@ ggplot(result, aes(x=fct_rev(V1), y=fct_rev(V2))) +
         plot.title = element_text(size=16),
         axis.title=element_text(size=14,face="bold"),
         axis.text.x = element_text(angle = 90, hjust = 1)) +
-  labs(fill = "Number of difference")
+  labs(fill = "Number of identical answer")
 
 ggsave("MapMatch.png", plot = last_plot(), device = "png", path = NULL ,scale = 1.5, units = c("in", "cm", "mm"),dpi = 300, limitsize = TRUE)
 

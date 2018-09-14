@@ -9,7 +9,6 @@ FenPrincipale::FenPrincipale() : QWidget()
 {
 
     QVBoxLayout *layoutPrincipale = new QVBoxLayout;
-
     //Formulaire de base
     m_nom = new QLineEdit;
     m_prenom = new QLineEdit;
@@ -17,7 +16,7 @@ FenPrincipale::FenPrincipale() : QWidget()
     info_etudiant->addRow("Nom : ",m_nom);
     info_etudiant->addRow("Prenom : ",m_prenom);
 
-    //Combobox
+        //Combobox
     type_etudiant = new QComboBox;
     type_etudiant->addItem("M1");
     type_etudiant->addItem("M2");
@@ -25,6 +24,8 @@ FenPrincipale::FenPrincipale() : QWidget()
     QPushButton *demarrer = new QPushButton("Démarrer", this);
 
     //Remplissage du layout principale
+    layoutPrincipale->setSpacing(20);
+    layoutPrincipale->setContentsMargins(50, 50, 50, 50);
     layoutPrincipale -> addLayout(info_etudiant);
     layoutPrincipale -> addWidget(type_etudiant);
     layoutPrincipale -> addWidget(demarrer);

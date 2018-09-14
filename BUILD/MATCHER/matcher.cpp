@@ -84,14 +84,14 @@ void match_classes()
             file << M2[idM2]["nom"] << ";";
             file << M1[idM1]["nom"] << ";";
 
-            int personnality_divergence = 0;
+            int personnality_ressemblance = 0;
             for (unsigned id = 0; id < M1[idM1]["valeurs"].size(); id++) //Calcul difference on each categorie
             {
-                if ((int)M2[idM2]["valeurs"][id] != (int)M1[idM1]["valeurs"][id]){
-                personnality_divergence = personnality_divergence + 1;
+                if ((int)M2[idM2]["valeurs"][id] == (int)M1[idM1]["valeurs"][id]){
+                personnality_ressemblance = personnality_ressemblance + 1;
                 }
             }
-            file << personnality_divergence << ";\n"; //Write the score in the file
+            file << personnality_ressemblance << ";\n"; //Write the score in the file
         }
     }
 
