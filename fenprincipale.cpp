@@ -34,7 +34,7 @@ FenPrincipale::FenPrincipale() : QWidget()
     // Paramètres de la page
     this->setLayout(layoutPrincipale);
     this->setWindowTitle("AMBB Application Parrainage");
-    this->setWindowIcon(QIcon("biologo.svg"));
+    this->setWindowIcon(QIcon("biologo.png"));
 
 //    connect(demarrer,SIGNAL(clicked()),this, SLOT(Debut_QCM()));
     connect(demarrer,SIGNAL(clicked(bool)),this, SLOT(Debut_QCM()));
@@ -54,6 +54,8 @@ void FenPrincipale::Debut_QCM()
     fen_qcm->score["niveau"]=niveau;
     cout<<"Fenprinci cout score: "<<fen_qcm->score<<endl;
     writeCSV(fen_qcm,fen_qcm->score);
+    m_nom->clear();
+    m_prenom->clear();
 }
 
 int FenPrincipale::writeCSV(FenQCM *fen_qcm, json json_object){

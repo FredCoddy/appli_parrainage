@@ -176,6 +176,11 @@ void FenQCM::questionSuivante(){
         rep2lbl->setText("");
         rep3lbl->setText("");
         rep4lbl->setText("");
+        la_question->repaint();
+        rep1->setEnabled(false);
+        rep2->setEnabled(false);
+        rep3->setEnabled(false);
+        rep4->setEnabled(false);
         sleep_for(seconds(3));
        close();
     }
