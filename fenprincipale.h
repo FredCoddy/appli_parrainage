@@ -17,15 +17,18 @@
 #include <QHBoxLayout>
 #include <QIcon>
 #include <QMessageBox>
-//#include <QtGui>
 #include <QObject>
 #include <QComboBox>
 #include <QString>
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <QLabel>
+#include <QPixmap>
+#include <QRect>
 #include "json.hpp"
 #include "fenqcm.h"
+
 using namespace std;
 using json = nlohmann::json;
 
@@ -51,9 +54,12 @@ public slots:
 
 private :
 //    QMessageBox *alerte;
+    QLabel *label_affiche;
+    //QPixmap *pixmap_affiche;
     QPushButton *demarrer;
     QFormLayout *info_etudiant;
     QVBoxLayout *layoutPrincipale;
+    QHBoxLayout *layoutFenetre;
 
 
 };
