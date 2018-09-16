@@ -18,6 +18,7 @@ int main(int argc, char *argv[]){
                     qApp->desktop()->availableGeometry()
                     ));
 
+
     // set style
     qApp->setStyle(QStyleFactory::create("Fusion"));
     // increase font size for better reading

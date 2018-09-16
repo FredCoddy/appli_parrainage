@@ -14,7 +14,7 @@ FenPrincipale::FenPrincipale() : QWidget()
     //Formulaire de base
     m_nom = new QLineEdit;
     m_prenom = new QLineEdit;
-    m_nom->setMinimumSize(300,20);
+    m_nom->setMinimumSize(300,20) ;
     QFormLayout *info_etudiant = new QFormLayout;
     info_etudiant->addRow("Nom : ",m_nom);
     info_etudiant->addRow("Prenom : ",m_prenom);
@@ -39,7 +39,6 @@ FenPrincipale::FenPrincipale() : QWidget()
 
     //Remplissage du layout principale
 
-    //info_etudiant->setGeometry(QRect::QRect(100,100,100,100));
     layoutPrincipale->setSpacing(20);
     layoutPrincipale->setContentsMargins(50, 50, 50, 50);
     layoutPrincipale -> addLayout(info_etudiant);
