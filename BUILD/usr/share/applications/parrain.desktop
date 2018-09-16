@@ -3,5 +3,5 @@ Type=Application
 Name=Parrain
 Comment=Application de parrainage
 Exec=Parrain
-Icon=biologo512
+Icon=128
 Categories=Utility;
