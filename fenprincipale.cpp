@@ -30,6 +30,7 @@ FenPrincipale::FenPrincipale() : QWidget()
 
         //Combobox
     type_etudiant = new QComboBox;
+    type_etudiant->addItem("Choisir un parcours :");
     type_etudiant->addItem("M1");
     type_etudiant->addItem("M2");
 
@@ -60,7 +61,7 @@ FenPrincipale::FenPrincipale() : QWidget()
 
 void FenPrincipale::Debut_QCM()
 {
-    if(m_nom->text().isEmpty() || m_prenom->text().isEmpty()){
+    if(m_nom->text().isEmpty() || m_prenom->text().isEmpty() || type_etudiant->currentIndex() == 0){
         QMessageBox::critical(this,"Erreur formulaire", "Vous devez remplire le formulaire en entier");
     }
     else{
