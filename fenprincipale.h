@@ -26,6 +26,8 @@
 #include <QLabel>
 #include <QPixmap>
 #include <QRect>
+#include <QFileDialog>
+
 #include "json.hpp"
 #include "fenqcm.h"
 
@@ -38,7 +40,6 @@ class FenPrincipale : public QWidget
 {
     Q_OBJECT //lancer compiler->qmake car Q_OBJECT est une
 
-
 public:
     FenPrincipale();
     QLineEdit *m_nom, *m_prenom;
@@ -47,6 +48,7 @@ public:
     string prenom;
     string niveau;
     int writeCSV(FenQCM*, json);
+    QString fichier;
 
 public slots:
     void Debut_QCM();
@@ -54,14 +56,11 @@ public slots:
 
 
 private :
-//    QMessageBox *alerte;
     QLabel *label_affiche;
-    //QPixmap *pixmap_affiche;
     QPushButton *demarrer;
     QFormLayout *info_etudiant;
     QVBoxLayout *layoutPrincipale;
     QHBoxLayout *layoutFenetre;
-
 
 };
 

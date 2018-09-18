@@ -1,13 +1,6 @@
 #include "fenqcm.h"
 #include "json.hpp"
 #include "fenprincipale.h"
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <QDir>
-#include <vector>
-#include <chrono>
-#include <thread>
 
 
 using json = nlohmann::json;
@@ -21,8 +14,10 @@ static std::ifstream ifs(path_questions_json);
 static json j = json::parse(ifs);
 static json score;
 
-FenQCM::FenQCM() : QDialog()
+FenQCM::FenQCM(QString qcm_fichier, QWidget *parent = 0) : QDialog(parent)
 {
+    std::cout << "marssouss lol" << qcm_fichier.toStdString() << std::endl;
+
     categoryCreator();
     // Initialisation du layout principale
     QVBoxLayout *layout_principal = new QVBoxLayout;
@@ -37,7 +32,11 @@ FenQCM::FenQCM() : QDialog()
     QString q_rep3 = QString::fromStdString(j[numero_question_str]["3"]["text"]);
     QString q_rep4 = QString::fromStdString(j[numero_question_str]["4"]["text"]);
 
-    label_num_question = new QLabel("1/"+QString::number(j.size()));
+    // La progress bar qui indique le numero de la question
+    laprogressbar = new QProgressBar(this);
+    laprogressbar->setMaximum(j.size());
+    laprogressbar->setValue(numero_question);
+
     la_question = new QLabel(q_question);
     rep1 = new QPushButton();
     rep2 = new QPushButton();
@@ -97,7 +96,7 @@ FenQCM::FenQCM() : QDialog()
 
 
     // Dernières étape : ajout du Layout dans la fenêtre
-    layout_principal->addWidget(label_num_question, 0, Qt::AlignRight);
+    layout_principal->addWidget(laprogressbar, 0, Qt::AlignRight);
     layout_principal->addWidget(la_question);
     layout_principal->addLayout(layout_bouton);
     this->setLayout(layout_principal);
@@ -117,10 +116,8 @@ FenQCM::FenQCM() : QDialog()
 void FenQCM::categoryCreator(){    
     for (int index= 1; index < j.size(); index++)
     {
-        cout<<"index: "<<index<<endl;
         for (int Questindex=1; Questindex < j[std::to_string(index)].size(); Questindex++)
         {
-        cout<<"question: "<<Questindex<<endl;
         std::string category = j[std::to_string(index)][std::to_string(Questindex)]["category"];
         if (score["note"][category].is_null())
         {
@@ -158,7 +155,6 @@ void FenQCM::actionReponse4(){
 void FenQCM::calculScore(){
     std::string category = j[std::to_string(numero_question)][std::to_string(answer)]["category"];
     std::string valuetext = j[std::to_string(numero_question)][std::to_string(answer)]["value"];
-    cout<< category << "  " << valuetext << endl;
     int currentscore = score["note"][category];
     score["note"][category]= currentscore + stoi(valuetext);
     vector<int> tempvector = score["sequence"].get<std::vector<int>>();
@@ -185,7 +181,7 @@ void FenQCM::questionSuivante(){
        close();
     }
     else{
-        label_num_question->setText(QString::number(numero_question)+ "/" + QString::number(j.size()));
+        laprogressbar->setValue(numero_question);
         la_question->setText(QString::fromStdString(j[std::to_string(numero_question)]["question"]));
         rep1lbl->setText(QString::fromStdString(j[std::to_string(numero_question)]["1"]["text"]));
         rep2lbl->setText(QString::fromStdString(j[std::to_string(numero_question)]["2"]["text"]));

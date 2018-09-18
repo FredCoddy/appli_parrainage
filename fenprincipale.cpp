@@ -1,4 +1,3 @@
-
 #include "fenprincipale.h"
 #include "dialog.h"
 #include <iostream>
@@ -8,6 +7,8 @@
 
 FenPrincipale::FenPrincipale() : QWidget()
 {
+    // Ouverture de la fenêtre de sélection du question.json
+    fichier = QFileDialog::getOpenFileName(this,"Sélectionner le questionnaire (.json)", "", ".json (*.json)");
 
     QVBoxLayout *layoutPrincipale = new QVBoxLayout;
     QHBoxLayout *layoutFenetre = new QHBoxLayout;
@@ -65,15 +66,15 @@ void FenPrincipale::Debut_QCM()
         QMessageBox::critical(this,"Erreur formulaire", "Vous devez remplire le formulaire en entier");
     }
     else{
-        FenQCM *fen_qcm = new FenQCM;
+        FenQCM *fen_qcm = new FenQCM(fichier,this);
         nom = m_nom->text().toStdString();
         prenom = m_prenom->text().toStdString();
         niveau = type_etudiant->currentText().toStdString();
+        //fen_qcm->qcm_fichier = "marssouss";
         fen_qcm->exec();
         fen_qcm->score["prenom"]=prenom;
         fen_qcm->score["nom"]=nom;
         fen_qcm->score["niveau"]=niveau;
-        cout<<"Fenprinci cout score: "<<fen_qcm->score<<endl;
         writeCSV(fen_qcm,fen_qcm->score);
         m_nom->clear();
         m_prenom->clear();
