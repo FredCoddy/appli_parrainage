@@ -366,5 +366,213 @@
       "category": "Blasé",
       "value": "1"
     }
+  },
+  "17": {
+    "question": "Tu es plutôt ?",
+    "1": {
+      "text": "DC / Marvel",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "2": {
+      "text": "Seigneur des anneaux",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "3": {
+      "text": "Harry Potter",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "4": {
+      "text": "Star Wars",
+      "category": "Adefinir",
+      "value": "1"
+    }
+  },
+  "18": {
+    "question": "Les films d'horreur ?",
+    "1": {
+      "text": "Ca te fais rire",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "2": {
+      "text": "Osouuuuurrr",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "3": {
+      "text": "Ca t'inspires",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "4": {
+      "text": "C'est nul",
+      "category": "Adefinir",
+      "value": "1"
+    }
+  },
+  "19": {
+    "question": "Les jeux vidéals",
+    "1": {
+      "text": "PC MASTER RACE",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "2": {
+      "text": "Consoleux",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "3": {
+      "text": "Tu joues pas à ça",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "4": {
+      "text": "Tu joues sur tout BALEK",
+      "category": "Adefinir",
+      "value": "1"
+    }
+  },
+  "20": {
+    "question": "Tu te vois plutôt comme étant",
+    "1": {
+      "text": "Discret",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "2": {
+      "text": "Rentre dedans",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "3": {
+      "text": "Comique",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "4": {
+      "text": "Mystérieux",
+      "category": "Adefinir",
+      "value": "1"
+    }
+  },
+  "21": {
+    "question": "Quel bioinfo pensez vous être / devenir ?",
+    "1": {
+      "text": "Le codeur fou",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "2": {
+      "text": "Le pousse bouton",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "3": {
+      "text": "L'élu (50% bio, 50% info)",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "4": {
+      "text": "Le statisticien",
+      "category": "Adefinir",
+      "value": "1"
+    }
+  },
+  "22": {
+    "question": "Quand tu étais petit, tu jouais...",
+    "1": {
+      "text": "aux billes",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "2": {
+      "text": "à Action man le plus grand de tous les héroooooos",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "3": {
+      "text": "au Docteur",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "4": {
+      "text": " à la Dinette",
+      "category": "Adefinir",
+      "value": "1"
+    }
+  },
+  "23": {
+    "question": "Ton Pokemon préféré (désolé elle est sale)",
+    "1": {
+      "text": "Carapute",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "2": {
+      "text": "Tortokancul",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "3": {
+      "text": "Nidoranus",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "4": {
+      "text": "Salamwesh",
+      "category": "Adefinir",
+      "value": "1"
+    }
+  },
+  "24": {
+    "question": "Ton insulte préféré",
+    "1": {
+      "text": "Catapultes tes grands morts",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "2": {
+      "text": "zut alors !",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "3": {
+      "text": "Leche moi le Pélo",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "4": {
+      "text": "Ta mère est tellement grosse que quand elle monte sur une balance ça écrit ton adresse IP",
+      "category": "Adefinir",
+      "value": "1"
+    }
+  },
+  "25": {
+    "question": "A propos de ton parrain / filleul...",
+    "1": {
+      "text": "Tu espères juste qu'il ne sera pas ce mec ou cette meuf chelou qui te fixes du regard dans le tram",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "2": {
+      "text": "Tu l'imagines grand(e), beau/belle, le regard pénétrant, intelligent(e) et probablement futur(e) prix nobel ",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "3": {
+      "text": "Il/elle a intérêt à être cool et marrant(e)",
+      "category": "Adefinir",
+      "value": "1"
+    },
+    "4": {
+      "text": "Tu veux être surpris \n\n ( ͡° ͜ʖ ͡°)",
+      "category": "Adefinir",
+      "value": "1"
+    }
   }
+
 }
