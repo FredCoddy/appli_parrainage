@@ -1,7 +1,9 @@
 # Match app for orientation party
 
 
-A simple `C++` Question & Answer UI. Data are stored as `CSV` and process with a `R` script.
+A simple `C++` Question & Answer UI with a `R` matching algortihm.
+
+Users data are stored as `CSV` files.
 
 ![app UI](/img/parrainage.gif)
 
