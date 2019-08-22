@@ -28,8 +28,8 @@ https://github.com/probonopd/linuxdeployqt
 _____
 
 
-This app proposé is proposed by the Bordeaux student in Bioinformatics group. 
+This app is proposed by the Bordeaux group of student in Bioinformatics. 
 
-See Association du master de Bioinformatique de Bordeaux (AMBB):
+See `Association du master de Bioinformatique de Bordeaux (AMBB)`:
 
 > https://www.facebook.com/assomasterbIoinfobordeaux/
